@@ -1,0 +1,28 @@
+{
+  "root": "apps/ynab-e2e",
+  "sourceRoot": "apps/ynab-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ynab-e2e/cypress.json",
+        "devServerTarget": "ynab:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ynab:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ynab-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ynab"]
+}

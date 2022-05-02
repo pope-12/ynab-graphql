@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "ynab": "apps/ynab",
+    "ynab-e2e": "apps/ynab-e2e"
+  }
+}
